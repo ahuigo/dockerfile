@@ -1,0 +1,5 @@
+From artifactory.ahuigo.com/docker/node:13.3.0-stretch-slim
+
+COPY package.json /app/
+WORKDIR /app
+RUN yarn config set registry https://artifactory.ahuigo.com/artifactory/api/npm/npm/ && yarn
